@@ -31,28 +31,10 @@ body {
 
 .container {
   width: 100%;
-  padding-right: 0.75rem;
-  padding-left: 0.75rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   margin-right: auto;
   margin-left: auto;
-}
-
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
 }
 
 .header .container {
@@ -111,7 +93,7 @@ form .avatar img {
 }
 
 form input {
-  width: 80%;
+  width: 65%;
   padding: 12px 9px;
   border-radius: 4px;
   border: 1px solid var(--light);
@@ -138,6 +120,7 @@ hr {
 .comment {
   display: flex;
   align-items: flex-start;
+  margin-bottom: 34px;
 }
 
 .comment img {
@@ -195,4 +178,53 @@ hr {
 
 .upvote_reply button:hover {
   color: var(--primary);
+}
+
+@media (max-width: 480px) {
+  form {
+    flex-direction: column;
+  }
+
+  form input {
+    width: 100%;
+  }
+
+  form .avatar,
+  input {
+    margin-bottom: 13px;
+  }
+
+  form button {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+
+  form input {
+    width: 65%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  form input {
+    width: 73%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  form input {
+    width: 80%;
+  }
 }

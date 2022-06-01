@@ -2,8 +2,8 @@
   "name": "obscure_comment",
   "version": "1.0.0",
   "description": "A standalone app that represents a single article page, and allows someone to submit comments and replies-to-comments, as well as upvote any comments they like.",
-  "main": "app.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "jest"
   },
   "repository": {
@@ -27,6 +27,21 @@
   },
   "homepage": "https://github.com/maxthestranger/obscure_comment#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "helmet": "^5.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.26.0",
+    "hint": "^6.2.0",
+    "nodemon": "^2.0.16",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
   }
 }

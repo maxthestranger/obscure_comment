@@ -5,8 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Obscure comment</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
-    <p>nice</p>
+    <main>
+      <header class="header">
+        <div class="container">
+          <img src="assets/img/avatar.svg" alt="avatar" />
+          <p>Rob Hope</p>
+          <button type="button" class="btn">Generate User</button>
+        </div>
+      </header>
+
+      <div class="comment_wrapper">
+        <div class="container">
+          <h2>Discussion</h2>
+
+          <form>
+            <div class="avatar">
+              <img src="assets/img/avatar.svg" alt="avatar" />
+            </div>
+            <input
+              type="text"
+              class="input"
+              placeholder="What are your thoughts?"
+            />
+            <button type="submit" class="btn">Submit</button>
+          </form>
+
+          <hr />
+
+          <div class="comments">
+            <div class="comment">
+              <img src="assets/img/avatar.svg" alt="avatar" />
+              <div class="comment_details">
+                <p class="name_time"><span>Rob Hope</span>45 min ago</p>
+                <p class="description">
+                  Jeepers now that's a huge release with some big community
+                  earnings to back it - it must be so rewarding seeing creators
+                  quit their day jobs after monetizing (with real MRR) on the
+                  new platform.
+                </p>
+                <div class="upvote_reply">
+                  <span> <i class="bi bi-caret-up-fill"></i> Upvote </span>
+                  <button type="button" class="reply">Reply</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

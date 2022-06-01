@@ -84,6 +84,7 @@ body {
   border-radius: 4px;
   transition: var(--trans);
   cursor: pointer;
+  font-family: var(--font);
 }
 
 .btn:hover {
@@ -94,5 +95,41 @@ body {
   font-size: 24px;
   color: var(--black);
   font-weight: bold;
-  margin: 30px 0;
+  margin: 30px 0 50px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+form .avatar img {
+  width: 40px;
+  height: auto;
+}
+
+form input {
+  width: 80%;
+  padding: 12px 9px;
+  border-radius: 4px;
+  border: 1px solid var(--light);
+  transition: var(--trans);
+  outline-width: 1px;
+  outline-color: transparent;
+}
+
+form input::placeholder {
+  color: var(--grey);
+  font-size: 13px;
+  font-family: var(--font);
+}
+
+form input:focus {
+  outline-color: var(--primary);
+}
+
+hr {
+  border-top: 1px solid var(--light);
+  margin: 50px 0;
 }

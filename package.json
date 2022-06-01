@@ -1,0 +1,32 @@
+{
+  "name": "obscure_comment",
+  "version": "1.0.0",
+  "description": "A standalone app that represents a single article page, and allows someone to submit comments and replies-to-comments, as well as upvote any comments they like.",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxthestranger/obscure_comment.git"
+  },
+  "keywords": [
+    "ghost",
+    "react",
+    "node",
+    "js",
+    "comment",
+    "system",
+    "mysql",
+    "express"
+  ],
+  "author": "Max The Stranger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maxthestranger/obscure_comment/issues"
+  },
+  "homepage": "https://github.com/maxthestranger/obscure_comment#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

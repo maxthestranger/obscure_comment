@@ -24,8 +24,9 @@
 body {
   background: var(--white);
   font-family: var(--font);
-  font-size: 16px;
+  font-size: 14px;
   color: var(--dark);
+  line-height: 19.5px;
 }
 
 .container {
@@ -132,4 +133,66 @@ form input:focus {
 hr {
   border-top: 1px solid var(--light);
   margin: 50px 0;
+}
+
+.comment {
+  display: flex;
+  align-items: flex-start;
+}
+
+.comment img {
+  width: 40px;
+  height: auto;
+  margin-right: 11px;
+}
+
+.name_time {
+  color: var(--muted);
+  font-size: 13px;
+  position: relative;
+}
+
+.name_time span {
+  font-weight: bold;
+  font-size: 15px;
+  color: var(--dark);
+  margin-right: 15px;
+}
+
+.name_time span::after {
+  content: '・';
+  position: absolute;
+  top: 0;
+}
+
+.description {
+  color: var(--dark);
+  font-size: 14px;
+  margin: 14px 0;
+}
+
+.upvote_reply {
+  display: flex;
+  align-items: center;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.upvote_reply button:first-child {
+  margin-right: 11px;
+}
+
+.upvote_reply button {
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--trans);
+}
+
+.upvote_reply button:hover {
+  color: var(--primary);
 }

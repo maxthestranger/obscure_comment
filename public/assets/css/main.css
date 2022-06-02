@@ -98,7 +98,7 @@ form .avatar img {
   height: auto;
 }
 
-form input {
+form .input {
   width: 65%;
   padding: 12px 9px;
   border-radius: 4px;
@@ -108,13 +108,13 @@ form input {
   outline-color: transparent;
 }
 
-form input::placeholder {
+form .input::placeholder {
   color: var(--grey);
   font-size: 13px;
   font-family: var(--font);
 }
 
-form input:focus {
+form .input:focus {
   outline-color: var(--primary);
 }
 
@@ -201,11 +201,11 @@ hr {
   }
 
   form .avatar,
-  input {
+  .input {
     margin-bottom: 13px;
   }
 
-  form input {
+  form .input {
     width: 100%;
   }
 
@@ -224,7 +224,7 @@ hr {
     max-width: 540px;
   }
 
-  form input {
+  form .input {
     width: 65%;
   }
 
@@ -239,7 +239,7 @@ hr {
     max-width: 720px;
   }
 
-  form input {
+  form .input {
     width: 73%;
   }
 
@@ -254,7 +254,7 @@ hr {
     max-width: 960px;
   }
 
-  form input {
+  form .input {
     width: 80%;
   }
 

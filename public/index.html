@@ -15,9 +15,9 @@
     <main>
       <header class="header">
         <div class="container">
-          <img src="assets/img/avatar.svg" alt="avatar" />
-          <p>Rob Hope</p>
-          <button type="button" class="btn">Generate User</button>
+          <img src="assets/img/user1.svg" alt="avatar" class="user_avatar" />
+          <p class="user_name">Rob Hope</p>
+          <button type="button" class="btn" id="user">Generate User</button>
         </div>
       </header>
 
@@ -25,14 +25,20 @@
         <div class="container">
           <h2>Discussion</h2>
 
-          <form>
+          <form id="form">
             <div class="avatar">
-              <img src="assets/img/avatar.svg" alt="avatar" />
+              <img
+                src="assets/img/user1.svg"
+                alt="avatar"
+                class="user_avatar"
+              />
             </div>
             <input
               type="text"
               class="input"
+              name="comment"
               placeholder="What are your thoughts?"
+              autocomplete="off"
             />
             <button type="submit" class="btn">Comment</button>
           </form>
@@ -42,7 +48,7 @@
           <div class="comments">
             <div class="comment">
               <div class="avatar">
-                <img src="assets/img/avatar.svg" alt="avatar" />
+                <img src="assets/img/user1.svg" alt="avatar" />
               </div>
               <div class="comment_details">
                 <p class="name_time"><span>Rob Hope</span>45 min ago</p>
@@ -60,9 +66,9 @@
                 </div>
               </div>
             </div>
-            <div class="comment">
+            <!-- <div class="comment">
               <div class="avatar after">
-                <img src="assets/img/avatar.svg" alt="avatar" />
+                <img src="assets/img/user1.svg" alt="avatar" />
               </div>
               <div class="comment_details">
                 <p class="name_time"><span>Rob Hope</span>45 min ago</p>
@@ -82,7 +88,7 @@
                 <div class="reply">
                   <div class="comment">
                     <div class="avatar">
-                      <img src="assets/img/avatar.svg" alt="avatar" />
+                      <img src="assets/img/user1.svg" alt="avatar" />
                     </div>
                     <div class="comment_details">
                       <p class="name_time"><span>Rob Hope</span>45 min ago</p>
@@ -101,10 +107,10 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="comment">
               <div class="avatar">
-                <img src="assets/img/avatar.svg" alt="avatar" />
+                <img src="assets/img/user1.svg" alt="avatar" />
               </div>
               <div class="comment_details">
                 <p class="name_time"><span>Rob Hope</span>45 min ago</p>
@@ -126,5 +132,7 @@
         </div>
       </div>
     </main>
+
+    <script type="module" src="assets/js/main.js"></script>
   </body>
 </html>

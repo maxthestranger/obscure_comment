@@ -74,6 +74,28 @@ body {
   background: #6422ce;
 }
 
+.empty {
+  width: 100%;
+  padding: 50px 20px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.empty i {
+  font-size: 60px;
+  margin: 20px 0 30px;
+  color: var(--light);
+}
+
+.empty p {
+  color: var(--grey);
+  font-weight: bold;
+}
+
 .comment_wrapper h2 {
   font-size: 24px;
   color: var(--black);

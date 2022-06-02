@@ -26,19 +26,35 @@ const displayComment = (comment, currentUser) => {
       <img src="assets/img/${currentUser.imgUrl}" alt="${currentUser.full_name}" />
     </div>
     <div class="comment_details">
-      <p class="name_time"><span>${currentUser.full_name}</span>45 min ago</p>
+      <p class="name_time"><span>${currentUser.full_name}</span>${comment?.createdAt}</p>
       <p class="description">
-        ${comment}
+        ${comment?.description}
       </p>
       <div class="upvote_reply">
         <button type="button">
-          <i class="bi bi-caret-up-fill"></i> Upvote
+          <i class="bi bi-caret-up-fill"></i> Upvote ${comment?.upvote}
         </button>
         <button type="button">Reply</button>
       </div>
     </div>`;
 
   commentCon.prepend(div);
+};
+
+const renderComments = () => {
+  sampleComments?.forEach((comment) => {
+    const user = userData.filter((user) => user.id === comment.userId);
+    displayComment(comment, user[0]);
+  });
+
+  if (sampleComments.length < 1) {
+    commentCon.innerHTML = `
+      <div class="empty">
+        <i class="bi bi-chat-left-quote"></i>
+        <p>Mmh! Seems pretty quite in here!</p>
+      </div>
+    `;
+  }
 };
 
 const handleSubmit = (e, currentUser) => {
@@ -53,6 +69,7 @@ const handleSubmit = (e, currentUser) => {
 };
 
 window.addEventListener('load', () => {
+  renderComments();
   // render current user
   let currentUser = getUser(userData);
   renderCurrentUser(currentUser);

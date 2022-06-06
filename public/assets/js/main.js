@@ -3,6 +3,8 @@ import { userData, sampleComments } from './userData.js';
 const form = document.querySelector('#form');
 const commentCon = document.querySelector('.comments');
 const userBtn = document.querySelector('#user');
+const upvoteBtn = document.querySelectorAll('.upvoteBtn');
+const replyBtn = document.querySelectorAll('.reply');
 
 const getUser = (users) => {
   return users[Math.floor(Math.random() * users.length)];
@@ -25,16 +27,16 @@ const displayComment = (comment, currentUser) => {
     <div class="avatar">
       <img src="assets/img/${currentUser.imgUrl}" alt="${currentUser.full_name}" />
     </div>
-    <div class="comment_details">
+    <div class="comment_details" data-id="${comment.commentId}">
       <p class="name_time"><span>${currentUser.full_name}</span>${comment?.createdAt}</p>
       <p class="description">
         ${comment?.description}
       </p>
       <div class="upvote_reply">
-        <button type="button">
-          <i class="bi bi-caret-up-fill"></i> Upvote ${comment?.upvote}
+        <button type="button" class="upvoteBtn">
+          <i class="bi bi-caret-up-fill"></i> Upvote <span>${comment?.upvote}</span>
         </button>
-        <button type="button">Reply</button>
+        <button type="button" id="reply">Reply</button>
       </div>
     </div>`;
 
@@ -61,9 +63,18 @@ const handleSubmit = (e, currentUser) => {
   e.preventDefault();
   const { comment } = e.target.elements;
 
+  const commentObj = {
+    userId: currentUser.id,
+    commentId: sampleComments[sampleComments.length - 1] + 1,
+    description: comment.value,
+    createdAt: 'Just now',
+    upvote: 0,
+    reply: [],
+  };
+
   // validation
   if (comment.value.trim() !== '') {
-    displayComment(comment.value, currentUser);
+    displayComment(commentObj, currentUser);
     comment.value = '';
   }
 };
@@ -79,6 +90,26 @@ window.addEventListener('load', () => {
     currentUser = getUser(userData);
 
     renderCurrentUser(currentUser);
+  });
+
+  commentCon.addEventListener('click', (e) => {
+    if (e.target.className === 'upvoteBtn') {
+      const parent = e.target.parentNode.parentNode;
+      const commentId = parent.dataset.id;
+
+      sampleComments.forEach((comment) => {
+        if (comment.commentId === Number(commentId)) {
+          comment.upvote++;
+        }
+      });
+
+      Array.from(e.target.children).forEach((child) => {
+        if (child.localName === 'span') {
+          const val = child.innerHTML;
+          child.innerHTML = Number(val) + 1;
+        }
+      });
+    }
   });
 
   form.addEventListener('submit', (e) => {

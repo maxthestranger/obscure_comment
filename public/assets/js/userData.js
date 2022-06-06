@@ -24,6 +24,7 @@ export const userData = [
 export const sampleComments = [
   {
     userId: 1,
+    commentId: 1,
     description:
       "Jeepers now that's a huge release with some big community earnings to back it - it must be so rewarding seeing creators quit their day jobs after monetizing (with real MRR) on the new platform.",
     createdAt: '4 minutes ago',
